@@ -1,3 +1,4 @@
+import 'package:chat_app/screens/startPage.dart';
 import 'package:flutter/material.dart';
 import './screens/homePage.dart';
 void main() {
@@ -10,10 +11,10 @@ class MyApp extends StatelessWidget {
                 return MaterialApp(
                         title: 'Flutter Demo',
                         theme: ThemeData(
-                                primarySwatch: Colors.blue,
+                                primaryColor:Colors.orange,
                         ),
                         debugShowCheckedModeBanner: false,
-                        home: HomePage(),
+                        home: StartPage(),
                 );
         }
 }
