@@ -1,11 +1,9 @@
-import 'dart:html';
-import 'package:chat_app/screens/homePage.dart';
 import 'package:chat_app/screens/loginPage.dart';
 import 'package:chat_app/screens/registrationPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-
 class StartPage extends StatefulWidget {
+        static String tag = 'start-page';
         @override
         _StartPageState createState() => _StartPageState();
 }
@@ -27,7 +25,7 @@ class _StartPageState extends State < StartPage > {
                                         onPressed: () {
                                                 Navigator.push(
                                                         context,
-                                                        MaterialPageRoute(builder: (context) => HomePage()),
+                                                        MaterialPageRoute(builder: (context) => LoginPage()),
                                                 );
                                         }, child: Text("Login", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white, ), ), 
                                         style: ElevatedButton.styleFrom(
