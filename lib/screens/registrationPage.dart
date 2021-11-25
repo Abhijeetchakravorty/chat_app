@@ -14,9 +14,21 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 return Scaffold(
                         appBar: AppBar(
                                 title: const Text('First Route'),
+                                
                         ),
                         body: Center(
-                                child: Text('I am here')
+                                child: ElevatedButton(onPressed: () {
+                                        Navigator.push(
+                                                context,
+                                                MaterialPageRoute(builder: (context) => HomePage()),
+                                        );
+                                }, child: Text("Open Chat", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white, ), ), style: ElevatedButton.styleFrom(
+                                        padding: EdgeInsets.only(left: 40, right: 40, top: 20, bottom: 20),
+                                        primary: Colors.blueAccent,
+                                        shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(10.0),
+                                        )
+                                )),
                         ),
                 );
         }

@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_signin_button/button_builder.dart';
+// import 'package:flutter_signin_button/button_builder.dart';
 import 'package:chat_app/screens/homePage.dart';
 
 
@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
   // Note: This is a GlobalKey<FormState>, not a GlobalKey<MyCustomFormState>!
   final _formKey = GlobalKey<FormState>();
 
-  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+//   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final TextEditingController emailController = new TextEditingController();
   final TextEditingController passwordController = new TextEditingController();
 
@@ -157,6 +157,9 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     return Scaffold(
+        appBar: AppBar(
+                title: const Text('Login'),                        
+        ),
         backgroundColor: Colors.white,
         body: Center(
           child: Form(

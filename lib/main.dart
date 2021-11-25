@@ -1,6 +1,6 @@
 import 'package:chat_app/screens/startPage.dart';
 import 'package:flutter/material.dart';
-import './screens/homePage.dart';
+// import './screens/homePage.dart';
 void main() {
   runApp(MyApp());
 }
