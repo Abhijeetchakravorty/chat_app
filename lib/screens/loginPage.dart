@@ -1,6 +1,6 @@
 import 'package:chat_app/screens/registrationPage.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 // import 'package:flutter_signin_button/button_builder.dart';
@@ -18,10 +18,10 @@ class _LoginPageState extends State<LoginPage> {
         @override
         void initState() {
                 super.initState();
-                Firebase.initializeApp().whenComplete(() { 
-                        print("completed");
-                        setState(() {});
-                });
+                // Firebase.initializeApp().whenComplete(() { 
+                //         print("completed");
+                //         setState(() {});
+                // });
         }
   // Create a global key that will uniquely identify the Form widget and allow
   // us to validate the form
@@ -113,16 +113,16 @@ class _LoginPageState extends State<LoginPage> {
           borderRadius: BorderRadius.circular(24),
         ),
         onPressed: () {
-          if (_formKey.currentState!.validate()) {
-            signIn(emailController.text, passwordController.text)
-                .then((uid) => {
-                        Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => HomePage()),
-                        )
-                })
-                .catchError((error) => {processError(error)});
-          }
+        //   if (_formKey.currentState!.validate()) {
+        //     signIn(emailController.text, passwordController.text)
+        //         .then((uid) => {
+        //                 Navigator.push(
+        //                         context,
+        //                         MaterialPageRoute(builder: (context) => HomePage()),
+        //                 )
+        //         })
+        //         .catchError((error) => {processError(error)});
+        //   }
         },
         padding: EdgeInsets.all(12),
         color: Colors.lightBlueAccent,
@@ -185,11 +185,11 @@ class _LoginPageState extends State<LoginPage> {
         ));
   }
 
-        Future<User?> currentUser() async {
-                final UserCredential authResult = await _auth.signInWithCredential(credential);
-                final User? user = authResult.user;
-                return user;
-        }
+        // Future<User?> currentUser() async {
+        //         final UserCredential authResult = await _auth.signInWithCredential(credential);
+        //         final User? user = authResult.user;
+        //         return user;
+        // }
 
   void processError(final PlatformException error) {
     if (error.code == "ERROR_USER_NOT_FOUND") {
